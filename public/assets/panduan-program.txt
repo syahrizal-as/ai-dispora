@@ -1,0 +1,86 @@
+AI READINESS — DISPORA PROVINSI JAWA BARAT
+Materi pengantar AI dan assessment kesiapan
+
+FASILITATOR
+Syahrizal As.
+Software Developer, Trainer, dan Praktisi AI-Assisted Development.
+S1 Sistem Informasi. Pengembangan software sejak 2020.
+
+TUJUAN
+Memahami AI dari contoh sederhana, mengenali kualitas data, menulis instruksi yang jelas, dan memeriksa hasil AI.
+
+AGENDA — TOTAL 100 MENIT
+1. Perkenalan dan orientasi — 5 menit
+2. Mengenal AI — 10 menit
+3. Data sebagai fondasi — 10 menit
+4. Demonstrasi AI — 15 menit
+5. Alur solusi AI — 10 menit
+6. Rangkuman dan penutup — 10 menit
+7. Assessment di Google Forms — 40 menit
+Tautan Google Forms dibagikan fasilitator setelah materi dan penutup.
+
+MATERI INTI
+AI: istilah payung untuk kemampuan mengenali pola, memprediksi, memahami bahasa, atau menghasilkan konten.
+Machine learning: bagian AI yang mempelajari pola dari contoh data.
+Deep learning: bagian machine learning dengan jaringan saraf berlapis.
+Generative AI: membuat draf teks, gambar, audio, video, atau kode.
+Multimodal: memproses beberapa jenis data, misalnya teks dan gambar.
+LLM: model bahasa skala besar untuk tugas seperti ringkasan dan draf email.
+RAG: mencari bahan relevan dari sumber yang diizinkan sebelum menyusun jawaban.
+Reasoning: membantu menyelesaikan masalah bertahap dan membandingkan pilihan.
+AI agent: dapat memilih langkah, memakai alat yang diizinkan, dan memeriksa hasil untuk mencapai tujuan.
+Workflow otomatis: alur kerja yang sudah diprogram.
+Multi-agent: beberapa agent berbagi peran; koordinasi dan evaluasi tetap diperlukan.
+
+CONTOH TUGAS
+- Ringkasan berita tim IT: cari sumber, periksa tanggal, susun ringkasan dan tautan, lalu tinjau sebelum dibagikan.
+- IT helpdesk: baca keluhan, cari panduan, susun draf tiket, lalu petugas memverifikasi.
+- Developer: baca error, telusuri penyebab, usulkan perbaikan kecil, lalu uji sebelum diterapkan.
+- Gudang: baca stok dan penjualan, buat usulan restok, lalu pemilik menyetujui pembelian.
+- Pabrik: kumpulkan riwayat dan SOP setelah sinyal anomali, lalu teknisi memeriksa.
+Seluruh simulasi hanya ilustrasi, tidak memakai AI langsung atau mengakses akun.
+
+DATA DAN PROMPT
+Periksa kelengkapan, format, duplikasi, serta kecocokan jumlah x harga dengan total.
+Contoh prompt: Periksa tabel transaksi. Tandai nilai kosong, ID duplikat, tanggal berbeda format, dan total tidak sesuai. Tampilkan baris dan alasan. Jangan mengubah sumber.
+Bandingkan setiap temuan dengan sumber dan hitung ulang angka penting.
+Dataset latihan berisi 10 transaksi fiktif dan empat jenis masalah. Tanda ! berarti perlu diperiksa, bukan sudah dikoreksi.
+
+14 / ALUR SOLUSI AI — CONTOH IT HELPDESK
+Integrasi: hubungkan laporan login, validasi input, pencarian SOP, model AI, dan draf tiket. Petugas memeriksa hasil. Uji setiap sambungan dan catat kegagalan. AI tidak diberi izin mereset akun.
+
+14A / MEMASANG SOLUSI AI — J.62AIN00.015.1
+Periksa hasil uji serta kebutuhan perangkat, layanan, versi, dan akses. Tulis prosedur pemasangan dan pemulihan; jelaskan kepada petugas. Pasang pada lingkungan uji dengan data fiktif, uji fungsi serta akses, lalu dokumentasikan sebelum penggunaan rutin.
+Contoh hasil kerja: checklist, prosedur, konfigurasi, versi, dan catatan hasil uji.
+Latihan: asisten dapat membaca folder personal yang tidak diperlukan. Batasi akses, uji ulang, dan catat hasilnya sebelum dipakai.
+
+14B / MERENCANAKAN PERAWATAN — J.62AIN00.016.1
+Kumpulkan monitoring, bandingkan dengan patokan awal dan target, tentukan komponen yang perlu dirawat, lalu dokumentasikan tindakan, prioritas, petugas, jadwal, uji ulang, dan pemulihan.
+Contoh: hasil sesuai SOP turun dari 18/20 menjadi 14/20 pada kumpulan pertanyaan uji yang sama. Rencanakan pemeriksaan sumber SOP dan pencarian dokumen, perbaikan, serta pengujian kembali.
+Contoh hasil kerja: rencana perawatan tertulis. Angka pada latihan bukan standar kelulusan umum.
+
+14C / MERAWAT SOLUSI AI — J.62AIN00.017.1
+Konfirmasi masalah dari input, perubahan sistem, dan catatan error. Jalankan perawatan sesuai rencana serta izin, cadangkan konfigurasi, uji kembali, lalu catat tindakan dan hasil sebelum/sesudah. Jika belum memenuhi target, ikuti prosedur pemulihan atau eskalasi.
+Contoh: ganti SOP lama yang telah disetujui, uji 20 pertanyaan yang sama, catat hasil 14/20 menjadi 19/20, lalu lanjutkan monitoring. Jika hanya 15/20 dengan target latihan 18/20, masalah belum selesai.
+Contoh hasil kerja: log perawatan dan bukti uji ulang. Semua angka dan hasil bersifat fiktif.
+
+Rencana perawatan menentukan apa yang akan dilakukan; perawatan melaksanakan dan mencatatnya. Latihan ini bersifat konseptual, tidak memasang atau merawat sistem nyata.
+
+ASSESSMENT
+100 soal pilihan ganda, 40 menit, satu jawaban paling tepat per soal.
+Dilaksanakan terpisah melalui Google Forms di akhir sesi. Ikuti instruksi dan waktu yang diumumkan penyelenggara. Bank soal dan kunci disiapkan untuk penyelenggara dalam Excel, bukan pada website peserta.
+
+ACUAN KOMPETENSI
+J.63OPR00.014.2 — Melakukan Pemasukan Data — materi 11: kolom wajib dan format input.
+J.63OPR00.015.2 — Memastikan Validitas Data — materi 11–12: daftar temuan pada transaksi fiktif.
+J.62AIN00.014.1 — Mengintegrasikan Komponen Solusi Artificial Intelligence (AI) — materi 14: alur laporan login hingga draf tiket.
+J.62AIN00.015.1 — Memasang Solusi Artificial Intelligence (AI) — materi 14A: kesiapan, prosedur, pemasangan, dan uji.
+J.62AIN00.016.1 — Merencanakan Perawatan Solusi Artificial Intelligence (AI) — materi 14B: evaluasi monitoring dan rencana tertulis.
+J.62AIN00.017.1 — Merawat Solusi Artificial Intelligence (AI) — materi 14C: tindakan, uji ulang, dan log.
+Materi 03–10 mendukung pemahaman AI, sedangkan materi 13 mendukung prompt dan verifikasi. Slide 15 menyediakan peta enam unit, latihan, serta contoh hasil kerja.
+Sesi dan assessment merupakan pengantar pemahaman awal, belum mencakup pembelajaran dan penilaian seluruh kriteria unjuk kerja, serta bukan pengganti asesmen sertifikasi.
+
+VERSI ACUAN
+Kode AI mengikuti acuan awal program, Kepmenaker 123/2021. JDIH Kemnaker mencatatnya telah diganti oleh Kepmenaker 103/2026. Sertifikasi mengikuti unit dan persyaratan skema LSP yang berlaku.
+https://jdih.kemnaker.go.id/peraturan/detail/2104/keputusan-menaker-nomor-123-tahun-2021
+https://jdih.kemnaker.go.id/peraturan/detail/3020/keputusan-menteri-ketenagakerjaan-nomor-103-tahun-2026
