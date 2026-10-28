@@ -37,7 +37,7 @@ Materi dan penutup 60 menit, lalu assessment terpisah di Google Forms 40 menit; 
 
 Slide 15 membedakan tiga unit yang dikenalkan (input, validitas, integrasi) dan tiga unit acuan lanjutan (pemasangan serta perawatan). Kode AI mengikuti acuan awal program; keterangan versi menjelaskan penggantian Kepmenaker 123/2021 oleh 103/2026. Cakupan pengantar belum membuktikan penguasaan seluruh unit atau menggantikan asesmen sertifikasi.
 
-PRD asli memuat rancangan awal. Kode dan ringkasan mengikuti perubahan terbaru: 100 soal/40 menit, assessment terpisah pada akhir sesi, materi AI modern dan gambaran integrasi, tanpa tanggal pembaruan atau tautan pelatihan utama.
+PRD asli memuat rancangan awal. Kode dan ringkasan mengikuti perubahan terbaru: 50 soal/40 menit, assessment terpisah pada akhir sesi, materi AI modern dan gambaran integrasi, tanpa tanggal pembaruan atau tautan pelatihan utama.
 
 ## Netlify
 

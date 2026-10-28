@@ -3,7 +3,7 @@
 Folder ini adalah proyek Next.js untuk AI Readiness Dispora Jawa Barat.
 
 - Kode: `app/`, `content/`, `public/`, serta konfigurasi di akar proyek.
-- Excel: `assessment/Bank-Soal-AI-Readiness-100-Soal.xlsx`.
+- Excel: `assessment/Bank-Soal-AI-Readiness-50-Soal.xlsx`.
 - PRD asli dan cadangan sebelum migrasi: `dokumen/`.
 - Cara menjalankan dan struktur proyek: [README.md](README.md).
 - Panduan upload: [NETLIFY.md](NETLIFY.md).
