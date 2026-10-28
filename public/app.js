@@ -93,29 +93,29 @@ const slides = [
     ]) + keyPoint('Materi dan penutup berlangsung 60 menit. Assessment 100 soal dilakukan terpisah melalui Google Forms selama 40 menit, setelah materi selesai.')
   },
   {
-    id:'ai-basics', label:'PETA DASAR AI', title:'AI membantu komputer mengenali pola.',
-    lead:'Anda sudah menjumpai AI saat email spam disaring, lagu direkomendasikan, atau penjualan diperkirakan dari data sebelumnya.',
+    id:'ai-basics', label:'PETA DASAR AI', title:'Kenali keluarga AI, dari umum ke khusus.',
+    lead:'Bayangkan AI sebagai keluarga besar. Di dalamnya ada Machine Learning; di dalam Machine Learning ada Deep Learning.',
     body:learningCards([
-      ['AI: istilah payung','Teknologi untuk tugas seperti mengenali pola, memahami bahasa, memprediksi, atau membuat konten.','Sistem membantu menandai email yang diduga spam.'],
-      ['Machine learning: belajar dari contoh','Bagian dari AI yang mempelajari pola dari data, lalu memakai pola itu pada data baru.','Data penjualan bulan lalu dipakai untuk memperkirakan kebutuhan stok.'],
-      ['Deep learning: pola yang lebih kompleks','Bagian dari machine learning yang menggunakan jaringan saraf berlapis.','Sistem membantu mengenali dugaan cacat pada foto kemasan produk.']
-    ]) + '<div class="concept-map"><span>AI</span><span>mencakup machine learning</span><span>yang mencakup deep learning</span></div>' + keyPoint('Pilih AI sesuai tugasnya. Pekerjaan dengan aturan tetap sering cukup memakai otomasi sederhana. Hasil AI tetap perlu diperiksa.') + sourceNote(sources.basics)
+      ['AI: kecerdasan buatan','Teknologi yang membantu komputer mengerjakan tugas seperti mengenali gambar, memahami bahasa, atau memberi saran.','Aplikasi musik menyarankan lagu; toko memperkirakan kebutuhan stok dari penjualan sebelumnya.'],
+      ['Machine Learning: belajar dari contoh','Cara membuat AI mempelajari pola dari contoh data, lalu memakai pola itu pada data baru.','Sistem mempelajari contoh email spam dan email biasa, lalu menyaring email baru yang diduga spam.'],
+      ['Deep Learning: belajar lewat banyak lapisan','Jenis Machine Learning yang mempelajari pola melalui banyak lapisan pengolahan, disebut jaringan saraf berlapis.','Ibarat mengenali foto dari garis, lalu bentuk, hingga objek. Contohnya, membedakan kucing dan anjing pada foto.']
+    ]) + '<div class="concept-map"><span>AI</span><span>mencakup Machine Learning</span><span>yang mencakup Deep Learning</span></div>' + keyPoint('Tidak semua AI memakai Machine Learning. Pilih sesuai tugasnya: pekerjaan dengan aturan tetap sering cukup memakai otomasi sederhana. Hasil AI tetap perlu diperiksa.') + sourceNote(sources.basics)
   },
   {
-    id:'gen-multimodal', label:'GENERATIVE AI & MULTIMODAL', title:'Membuat konten dan memahami beberapa jenis masukan.',
-    lead:'Dua istilah ini menjelaskan kemampuan yang berbeda. Satu produk AI dapat memiliki keduanya.',
+    id:'gen-multimodal', label:'GENERATIVE AI & MULTIMODAL', title:'Membuat konten dan mengolah beragam bahan.',
+    lead:'Generative AI masa kini umumnya memakai Deep Learning. Multimodal menjelaskan jenis bahan yang bisa diproses. Satu aplikasi dapat memiliki kedua kemampuan ini.',
     body:learningCards([
-      ['Generative AI','Membuat draf baru, misalnya teks, gambar, audio, video, atau kode, berdasarkan instruksi.','Tim layanan meminta draf balasan yang sopan dari keluhan pelanggan.'],
-      ['Multimodal','Memproses lebih dari satu jenis data, misalnya teks bersama gambar atau suara.','Petugas mengirim foto label produk dan meminta AI membandingkannya dengan aturan tertulis.']
-    ],2) + '<div class="plain-definition"><strong>LLM itu apa?</strong><p>Large language model adalah model bahasa skala besar. Contoh pekerjaannya: merangkum artikel, menyusun email, atau membantu menjelaskan kode.</p></div>' + keyPoint('Foto buram dan instruksi yang kurang jelas dapat menimbulkan kesalahan. Kemampuan input dan output berbeda antarproduk.') + sourceNote(sources.gen,sources.multi)
+      ['Generative AI: membuat konten','AI yang membuat konten sesuai instruksi, seperti draf teks, gambar, suara, video, atau kode.','Dari catatan rapat, AI menyusun draf email tindak lanjut untuk diperiksa sebelum dikirim.'],
+      ['Multimodal: mengolah beragam bahan','Kemampuan AI mengolah beberapa jenis bahan, misalnya tulisan, gambar, dan suara, dalam satu sistem.','Anda mengirim foto struk bersama pertanyaan tertulis: “Apa saja yang saya beli?”']
+    ],2) + '<div class="plain-definition"><strong>LLM itu apa?</strong><p>Large language model adalah model bahasa skala besar. Contoh pekerjaannya: merangkum artikel, menyusun email, atau membantu menjelaskan kode.</p></div>' + keyPoint('Generative AI = membuat konten; multimodal = mengolah beberapa jenis bahan. Membaca foto struk lalu membuat ringkasannya bisa memakai keduanya. Foto buram bisa menimbulkan kesalahan. Kemampuan input dan output berbeda antarproduk.') + sourceNote(sources.gen,sources.multi)
   },
   {
-    id:'rag-reasoning', label:'KONTEKS & PENALARAN', title:'Cari bahan yang tepat. Selesaikan masalah bertahap.',
-    lead:'Bayangkan rekan kerja yang membuka panduan sebelum menjawab, lalu membandingkan pilihan dengan teliti.',
+    id:'rag-reasoning', label:'KONTEKS & PENALARAN', title:'RAG mencari rujukan. Reasoning membantu mencari penyelesaian.',
+    lead:'Ibarat mengerjakan tugas dengan buku panduan: cari bahan yang tepat, lalu pertimbangkan langkah penyelesaiannya. RAG dan reasoning bisa dipakai bersama.',
     body:learningCards([
-      ['RAG: mencari bahan sebelum menjawab','Sistem mengambil informasi yang relevan dari sumber yang diizinkan, lalu menggunakannya untuk menyusun jawaban.','Pertanyaan tentang retur → cari SOP terbaru → jawab dengan rujukan.'],
-      ['Reasoning: mengerjakan masalah bertahap','Model membantu memecahkan masalah yang perlu beberapa langkah atau perbandingan.','Bandingkan dua rencana pengiriman berdasarkan biaya, kapasitas, dan batas waktu.']
-    ],2) + '<div class="lesson-checks"><div><strong>Periksa sumber RAG</strong><span>Dokumennya benar, masih berlaku, dan boleh diakses?</span></div><div><strong>Periksa hasil reasoning</strong><span>Asumsinya masuk akal dan hitungannya cocok?</span></div></div>' + keyPoint('RAG menambahkan konteks, bukan melatih ulang model. Reasoning tetap dapat salah; angka penting perlu dihitung ulang.') + sourceNote(sources.rag,sources.reasoning)
+      ['RAG: buka rujukan sebelum menjawab','Cara membantu Generative AI menjawab dengan mencari rujukan yang relevan lebih dulu. Seperti membuka buku panduan sebelum menjawab.','Untuk pertanyaan pengembalian barang, sistem mencari aturan retur toko yang diizinkan, lalu AI menjawab berdasarkan isinya.'],
+      ['Reasoning: menyelesaikan masalah bertahap','Kemampuan AI membantu menyelesaikan masalah bertahap, misalnya membandingkan pilihan sambil mempertimbangkan beberapa syarat.','Memilih jasa kirim dengan membandingkan ongkos, kapasitas, dan waktu tiba agar barang sampai sebelum Jumat.']
+    ],2) + '<div class="lesson-checks"><div><strong>Periksa sumber RAG</strong><span>Panduannya relevan, masih berlaku, dan boleh dibaca pengguna?</span></div><div><strong>Periksa hasil reasoning</strong><span>Syaratnya sudah dipenuhi dan hitungannya benar?</span></div></div>' + keyPoint('RAG menambahkan bahan rujukan saat menjawab, bukan melatih ulang model. Reasoning membantu memakai informasi untuk menyelesaikan masalah. Jika rujukan tidak ada, nyatakan keterbatasannya. Hasil dan hitungan tetap perlu diperiksa.') + sourceNote(sources.rag,sources.reasoning)
   },
   {
     id:'agent', label:'MENGENAL AI AGENT', title:'AI agent membantu mengerjakan beberapa langkah.',
