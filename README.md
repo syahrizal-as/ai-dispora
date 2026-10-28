@@ -25,7 +25,7 @@ Server pratinjau hasil build tersedia pada http://localhost:4173. `npm start` me
 - `app/page.tsx`: halaman Next.js. Membaca markup lokal tepercaya saat build dan memuat interaksi melalui `next/script` setelah hidrasi.
 - `app/layout.tsx`: metadata, bahasa, font, dan stylesheet.
 - `content/landing.html`: sumber markup halaman. Bagian body dirender oleh halaman Next.js; metadata dan aset head dikelola layout.
-- `public/app.js`: 16 materi, studi kasus, dan enam simulasi. Materi 14A–14C membahas pemasangan, rencana perawatan, dan pelaksanaan perawatan.
+- `public/app.js`: 16 materi, studi kasus, dan enam simulasi. Materi 14 memberikan gambaran alur integrasi tanpa rincian pemasangan dan perawatan.
 - `public/styles.css`: tampilan desktop dan ponsel.
 - `public/assets/panduan-program.txt`: ringkasan peserta.
 
@@ -33,11 +33,11 @@ Berkas penyelenggara disimpan hanya pada salinan lokal dan dikecualikan dari Git
 
 ## Materi dan assessment
 
-Materi dan penutup 60 menit, lalu assessment terpisah di Google Forms 40 menit; total 100 menit. Fasilitator membagikan tautan setelah materi. Formulir belum dibuat atau ditautkan. Skrip opsional pada Excel belum dijalankan dan tidak memasang timer otomatis.
+Materi dan penutup 60 menit, lalu assessment terpisah di Google Forms 40 menit; total 100 menit. Fasilitator membagikan tautan setelah materi. Soal tidak mencakup AI agent, multi-agent, atau rincian pemasangan/perawatan. Materi pengenalan AI agent tetap tersedia. Formulir belum dibuat atau ditautkan. Skrip opsional pada Excel belum dijalankan dan tidak memasang timer otomatis.
 
-Slide 15 memetakan enam unit acuan ke materi dan latihan pengantar. Kode AI mengikuti acuan awal program; keterangan versi menjelaskan penggantian Kepmenaker 123/2021 oleh 103/2026. Cakupan pengantar belum membuktikan penguasaan seluruh unit atau menggantikan asesmen sertifikasi.
+Slide 15 membedakan tiga unit yang dikenalkan (input, validitas, integrasi) dan tiga unit acuan lanjutan (pemasangan serta perawatan). Kode AI mengikuti acuan awal program; keterangan versi menjelaskan penggantian Kepmenaker 123/2021 oleh 103/2026. Cakupan pengantar belum membuktikan penguasaan seluruh unit atau menggantikan asesmen sertifikasi.
 
-PRD asli memuat rancangan awal. Kode dan ringkasan mengikuti perubahan terbaru: 100 soal/40 menit, assessment terpisah pada akhir sesi, materi AI modern dan perawatan, tanpa tanggal pembaruan atau tautan pelatihan utama.
+PRD asli memuat rancangan awal. Kode dan ringkasan mengikuti perubahan terbaru: 100 soal/40 menit, assessment terpisah pada akhir sesi, materi AI modern dan gambaran integrasi, tanpa tanggal pembaruan atau tautan pelatihan utama.
 
 ## Netlify
 

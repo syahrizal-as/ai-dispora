@@ -7,7 +7,7 @@ Proyek memakai Next.js dengan `output: "export"`. Hasil build berupa file statis
 1. Dari folder proyek, jalankan `npm ci` lalu `npm run build`.
 2. Buka Netlify Drop pada akun Anda: https://app.netlify.com/drop.
 3. Unggah folder `out/`. Paket ZIP tersedia di `deployment/dispora-ai-readiness-netlify.zip`; ekstrak terlebih dahulu, lalu unggah folder hasil ekstraknya yang berisi `index.html`, `_next/`, dan aset lainnya.
-4. Setelah terbit, periksa halaman, tombol Buka Materi, simulasi, serta tiga bagian 14A–14C.
+4. Setelah terbit, periksa halaman, tombol Buka Materi, simulasi, serta materi 14 tentang alur integrasi.
 
 Excel dan dokumen penyelenggara berada di luar `out/`, sehingga tidak ikut pada unggahan tersebut.
 

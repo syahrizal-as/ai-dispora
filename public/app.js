@@ -22,56 +22,13 @@ const sources = {
 const learningCards = (items, columns = 3) => `<div class="learning-grid learning-cols-${columns}">${items.map(([term, meaning, example]) => `<article class="learning-card"><h3>${term}</h3><p>${meaning}</p><div class="learning-example"><span>CONTOH</span><p>${example}</p></div></article>`).join('')}</div>`;
 const flow = (steps) => `<div class="flow-steps">${steps.map((text,i)=>`${i?'<i aria-hidden="true">→</i>':''}<span>${text}</span>`).join('')}</div>`;
 const keyPoint = text => `<p class="reader-note"><strong>Yang perlu diingat:</strong> ${text}</p>`;
-const unitLessons = [
-  {
-    id:'install', number:'14A', code:'J.62AIN00.015.1', title:'Memasang Solusi Artificial Intelligence (AI)',
-    meaning:'Menyiapkan solusi AI agar bisa digunakan di lingkungan kerja sesuai kebutuhan dan prosedur. Memakai chatbot sekali belum mencakup pemasangan sebuah solusi.',
-    steps:[
-      ['Periksa kesiapan','Tinjau hasil uji, perangkat atau layanan, versi komponen, koneksi, serta hak akses yang diperlukan.'],
-      ['Tulis prosedur','Catat urutan pemasangan, pengaturan, cara menguji, dan cara kembali ke versi sebelumnya. Jelaskan kepada petugas yang akan memakai solusi.'],
-      ['Pasang sesuai prosedur','Siapkan aplikasi, layanan AI, sumber SOP, dan koneksi sistem tiket pada lingkungan uji. Gunakan data fiktif dan izin terbatas.'],
-      ['Uji dan catat','Uji laporan login, sumber yang hilang, dan akses yang ditolak. Dokumentasikan versi, konfigurasi, hasil uji, serta persetujuan sebelum penggunaan rutin.']
-    ],
-    example:'Tim IT menyiapkan asisten helpdesk yang membaca SOP dan membuat draf tiket. Asisten tidak diberi izin mereset akun. Petugas mencoba beberapa laporan sebelum solusi dipakai tim.',
-    output:'Checklist pemasangan + prosedur + catatan versi dan hasil uji.',
-    exercise:'Asisten berhasil membuat tiket, tetapi bisa membaca folder personal yang tidak diperlukan. Apakah sudah siap dipakai?',
-    answer:'Belum. Batasi akses ke sumber yang diperlukan, uji ulang akses yang boleh dan tidak boleh dilakukan, lalu catat hasil serta persetujuannya.'
-  },
-  {
-    id:'maintenance-plan', number:'14B', code:'J.62AIN00.016.1', title:'Merencanakan Perawatan Solusi Artificial Intelligence (AI)',
-    meaning:'Menentukan bagian yang perlu dirawat berdasarkan hasil pemantauan, lalu menyusun tindakan, jadwal, dan penanggung jawabnya.',
-    steps:[
-      ['Kumpulkan pemantauan','Catat ketepatan jawaban, waktu respons, kegagalan koneksi, biaya, dan temuan hak akses.'],
-      ['Bandingkan dengan patokan','Gunakan hasil uji awal dan target yang disepakati. Contoh latihan: jawaban sesuai SOP turun dari 18/20 menjadi 14/20 pada kumpulan uji yang sama.'],
-      ['Pilih bagian dan tindakan','Periksa apakah masalah berasal dari SOP usang, pencarian dokumen, layanan AI, atau koneksi tiket. Tentukan prioritas perbaikannya.'],
-      ['Dokumentasikan rencana','Tetapkan penanggung jawab, jadwal, langkah uji ulang, serta kondisi penghentian sementara atau pemulihan.']
-    ],
-    example:'Setiap Jumat, petugas helpdesk meninjau 20 pertanyaan uji yang sama. Jika jawaban sesuai SOP di bawah 18/20, tim memeriksa sumber dan pencarian, lalu menjadwalkan perbaikan serta uji ulang.',
-    output:'Rencana tertulis: komponen, masalah, target, tindakan, penanggung jawab, jadwal, dan uji ulang.',
-    exercise:'Dari 20 pertanyaan uji yang sama, hanya 14 dijawab sesuai SOP; targetnya 18. Apa yang perlu masuk ke rencana?',
-    answer:'Catat selisih dari target, periksa sumber dan pencarian SOP, tetapkan petugas serta jadwal perbaikan, lalu rencanakan uji ulang 20 pertanyaan. Angka ini contoh latihan, bukan standar kelulusan umum.'
-  },
-  {
-    id:'maintenance', number:'14C', code:'J.62AIN00.017.1', title:'Merawat Solusi Artificial Intelligence (AI)',
-    meaning:'Melaksanakan perawatan sesuai rencana, memeriksa hasilnya, dan mencatat seluruh tindakan yang dilakukan.',
-    steps:[
-      ['Konfirmasi masalah','Cocokkan laporan pengguna, input, perubahan sistem, dan catatan error dengan rencana perawatan.'],
-      ['Lakukan perbaikan','Setelah diizinkan, cadangkan konfigurasi dan perbarui komponen yang bermasalah sesuai prosedur. Misalnya ganti SOP lama atau pulihkan koneksi yang gagal.'],
-      ['Uji ulang','Jalankan pertanyaan uji yang sama; bandingkan ketepatan, waktu respons, serta hak akses dengan target. Jangan menganggap perbaikan pasti berhasil.'],
-      ['Catat dan tindak lanjuti','Rekam perubahan, petugas, waktu, versi, hasil sebelum/sesudah, dan status. Jika gagal, ikuti prosedur pemulihan dan eskalasi.']
-    ],
-    example:'Petugas menemukan SOP login lama masih digunakan. Tim mengganti sumber dengan SOP yang disetujui, menguji ulang, lalu mencatat hasil 14/20 menjadi 19/20. Pemantauan tetap dilanjutkan.',
-    output:'Log perawatan + bukti uji ulang + keputusan lanjut, pulihkan, atau eskalasi.',
-    exercise:'SOP sudah diganti, tetapi hasil uji hanya 15/20. Bolehkah masalah langsung ditandai selesai?',
-    answer:'Belum. Hasil masih di bawah target latihan 18/20. Catat hasilnya, telusuri komponen lain, dan ikuti prosedur pemulihan atau eskalasi sebelum dinyatakan selesai.'
-  }
-];
-const renderUnitLessons = () => `<div class="unit-lessons">${unitLessons.map((u,i)=>`<details class="unit-lesson" id="unit-${u.id}" ${i===0?'open':''}><summary><span class="unit-number">${u.number}</span><span><code>${u.code}</code><strong>${u.title}</strong></span><span class="unit-toggle" aria-hidden="true">+</span></summary><div class="unit-content"><p class="unit-meaning">${u.meaning}</p><ol class="unit-steps">${u.steps.map(([title,text])=>`<li><strong>${title}</strong><p>${text}</p></li>`).join('')}</ol><div class="unit-example"><span>CONTOH IT HELPDESK</span><p>${u.example}</p><strong>Hasil kerja</strong><p>${u.output}</p></div><div class="unit-exercise"><strong>Coba pikirkan</strong><p>${u.exercise}</p><details><summary>Lihat contoh jawaban</summary><p>${u.answer}</p></details></div></div></details>`).join('')}</div>`;
 const competencyMap = [
   {code:'J.63OPR00.014.2',title:'Melakukan Pemasukan Data',topic:'data',where:'11 / Fondasi Data',scope:'Pahami kolom, kelengkapan, dan format saat memasukkan data.',practice:'Tentukan kolom wajib dan format tanggal pada tabel transaksi.',evidence:'Contoh baris input beserta aturan pengisiannya.'},
   {code:'J.63OPR00.015.2',title:'Memastikan Validitas Data',topic:'case',where:'11–12 / Fondasi Data & Studi Kasus',scope:'Kenali nilai kosong, duplikat, format berbeda, dan total yang keliru.',practice:'Temukan masalah pada 10 transaksi fiktif dan periksa sumbernya.',evidence:'Daftar baris bermasalah, alasan, dan langkah verifikasi.'},
-  {code:'J.62AIN00.014.1',title:'Mengintegrasikan Komponen Solusi Artificial Intelligence (AI)',topic:'solution',where:'14 / Alur Solusi AI',scope:'Hubungkan masukan, sumber SOP, model, aplikasi, dan pemeriksaan manusia.',practice:'Jelaskan perjalanan laporan login hingga menjadi draf tiket.',evidence:'Sketsa alur komponen dan hasil uji sambungannya.'},
-  ...unitLessons.map(u=>({code:u.code,title:u.title,topic:'solution',unit:u.id,where:`${u.number} / ${u.id==='install'?'Pemasangan':u.id==='maintenance-plan'?'Rencana Perawatan':'Pelaksanaan Perawatan'}`,scope:u.meaning,practice:u.exercise,evidence:u.output}))
+  {code:'J.62AIN00.014.1',title:'Mengintegrasikan Komponen Solusi Artificial Intelligence (AI)',topic:'solution',where:'14 / Alur Solusi AI',scope:'Pahami hubungan data, sumber SOP, model AI, aplikasi, dan pemeriksaan manusia.',practice:'Jelaskan perjalanan laporan login hingga menjadi draf tiket.',evidence:'Sketsa alur data, proses AI, dan pemeriksaan hasil.'},
+  {code:'J.62AIN00.015.1',title:'Memasang Solusi Artificial Intelligence (AI)',where:'Acuan lanjutan',scope:'Unit acuan program. Rincian pemasangan tidak dibahas dan tidak diujikan pada sesi pengantar ini.'},
+  {code:'J.62AIN00.016.1',title:'Merencanakan Perawatan Solusi Artificial Intelligence (AI)',where:'Acuan lanjutan',scope:'Unit acuan program. Penyusunan rencana perawatan tidak dibahas dan tidak diujikan pada sesi pengantar ini.'},
+  {code:'J.62AIN00.017.1',title:'Merawat Solusi Artificial Intelligence (AI)',where:'Acuan lanjutan',scope:'Unit acuan program. Pelaksanaan perawatan tidak dibahas dan tidak diujikan pada sesi pengantar ini.'}
 ];
 const slides = [
   {
@@ -187,14 +144,18 @@ const slides = [
     ]) + keyPoint('Cocokkan temuan dengan sumber dan hitung ulang angka penting. Instruksi yang rinci tetap tidak menjamin AI selalu benar.')
   },
   {
-    id:'solution', label:'ALUR SOLUSI AI', title:'Hubungkan, pasang, lalu rawat solusi AI.',
-    lead:'Ikuti satu contoh: asisten helpdesk yang membaca SOP dan menyiapkan draf tiket kendala login. Kita mengenal alurnya tanpa memasang sistem sungguhan.',
-    body:flow(['Data masuk','Validasi','AI','Aplikasi & output','Verifikasi','Monitoring']) + '<div class="plain-definition"><strong>Integrasi itu apa?</strong><p>Menghubungkan komponen agar bekerja bersama: laporan login → pemeriksaan input → pencarian SOP → model AI → draf tiket → petugas memeriksa. Uji apakah laporan diterima, SOP dapat ditemukan, dan draf sampai ke aplikasi tiket. Catat hasil serta sambungan yang gagal.</p></div><p class="unit-intro">Setelah komponen terhubung, ada tiga pekerjaan berbeda. Buka tiap bagian untuk melihat langkah dan latihannya.</p>' + renderUnitLessons() + keyPoint('Rencana perawatan menentukan apa yang akan dilakukan; perawatan melaksanakan dan mencatatnya. Semua angka dan hasil pada contoh ini bersifat fiktif.')
+    id:'solution', label:'ALUR SOLUSI AI', title:'Hubungkan AI dengan alur kerja.',
+    lead:'Contoh sederhana: laporan kendala login dibaca bersama panduan kantor, lalu AI membantu menyiapkan draf tiket untuk diperiksa petugas.',
+    body:flow(['Data masuk','Validasi','AI','Aplikasi & output','Verifikasi','Monitoring']) + learningCards([
+      ['Data dan sumber','Siapkan masukan yang lengkap serta sumber yang relevan dan boleh digunakan.','Laporan login berisi nama aplikasi dan pesan error, disertai SOP yang sesuai.'],
+      ['Integrasi','Hubungkan data, AI, dan aplikasi agar hasilnya dapat digunakan dalam pekerjaan.','Laporan dan SOP menjadi bahan AI untuk menyiapkan draf tiket pada aplikasi helpdesk.'],
+      ['Pemeriksaan hasil','Petugas memeriksa isi draf dan mengikuti hasilnya selama digunakan.','Cocokkan draf dengan keluhan dan SOP. Jika hasil kurang sesuai, periksa masukan dan sumbernya.']
+    ]) + keyPoint('Integrasi menghubungkan komponen menjadi satu alur. Sebelum dipakai rutin, uji dengan kebutuhan yang sesuai. Pemantauan membantu melihat apakah hasil tetap berguna; keputusan penting tetap diperiksa manusia.')
   },
   {
     id:'competency', label:'ACUAN KOMPETENSI', title:'Dari unit acuan ke materi dan latihan.',
-    lead:'Enam unit berikut menjadi acuan pengenalan. Peta ini menunjukkan bagian materi, latihan awal, dan contoh hasil kerja yang berkaitan dengan tiap unit.',
-    body:'<div class="competency-context"><strong>Posisi materi pengantar</strong><p>Materi 03–10 membangun pemahaman AI; materi 13 melatih prompt dan verifikasi. Penerapannya dihubungkan ke enam unit melalui materi 11–14. Contoh hasil kerja berikut masih perlu dipraktikkan dan dinilai lebih lanjut.</p></div><div class="competency-map">'+competencyMap.map(u=>`<article><code>${u.code}</code><h3>${u.title}</h3><span class="competency-location">${u.where}</span><p>${u.scope}</p><dl><div><dt>Latihan pengantar</dt><dd>${u.practice}</dd></div><div><dt>Contoh hasil kerja</dt><dd>${u.evidence}</dd></div></dl><button class="text-button" data-topic="${u.topic}" ${u.unit?`data-unit="${u.unit}"`:''}>Buka materi terkait ${icon('arrow')}</button></article>`).join('')+'</div>'+keyPoint('Cakupan ini merupakan pengantar, belum pembelajaran dan penilaian seluruh kriteria unjuk kerja. Assessment 100 soal memetakan pemahaman awal; penguasaan unit memerlukan praktik serta asesmen yang sesuai.')+'<div class="competency-reference"><strong>Versi acuan</strong><p>Kode unit AI di atas mengikuti acuan awal program, yaitu Kepmenaker 123/2021. JDIH Kemnaker mencatatnya telah diganti oleh Kepmenaker 103/2026. Untuk sertifikasi, gunakan unit dan persyaratan dalam skema LSP yang berlaku.</p>'+sourceNote(reference('https://jdih.kemnaker.go.id/peraturan/detail/2104/keputusan-menaker-nomor-123-tahun-2021','Acuan 123/2021'),reference('https://jdih.kemnaker.go.id/peraturan/detail/3020/keputusan-menteri-ketenagakerjaan-nomor-103-tahun-2026','Acuan 103/2026'))+'</div>'
+    lead:'Enam unit berikut merupakan acuan program. Pengantar ini berfokus pada input data, validasi, dan gambaran integrasi; tiga unit lainnya menjadi acuan lanjutan.',
+    body:'<div class="competency-context"><strong>Posisi materi pengantar</strong><p>Materi 03–10 membangun pemahaman AI, materi 11–12 membahas data, materi 13 melatih prompt dan verifikasi, serta materi 14 mengenalkan alur integrasi. Rincian pemasangan dan perawatan tidak menjadi materi atau soal sesi ini.</p></div><div class="competency-map">'+competencyMap.map(u=>`<article><code>${u.code}</code><h3>${u.title}</h3><span class="competency-location">${u.where}</span><p>${u.scope}</p>${u.topic?`<dl><div><dt>Latihan pengantar</dt><dd>${u.practice}</dd></div><div><dt>Contoh hasil kerja</dt><dd>${u.evidence}</dd></div></dl><button class="text-button" data-topic="${u.topic}">Buka materi terkait ${icon('arrow')}</button>`:''}</article>`).join('')+'</div>'+keyPoint('Cakupan ini merupakan pengantar, belum pembelajaran dan penilaian seluruh kriteria unjuk kerja. Assessment 100 soal memetakan pemahaman awal; penguasaan unit memerlukan praktik serta asesmen yang sesuai.')+'<div class="competency-reference"><strong>Versi acuan</strong><p>Kode unit AI di atas mengikuti acuan awal program, yaitu Kepmenaker 123/2021. JDIH Kemnaker mencatatnya telah diganti oleh Kepmenaker 103/2026. Untuk sertifikasi, gunakan unit dan persyaratan dalam skema LSP yang berlaku.</p>'+sourceNote(reference('https://jdih.kemnaker.go.id/peraturan/detail/2104/keputusan-menaker-nomor-123-tahun-2021','Acuan 123/2021'),reference('https://jdih.kemnaker.go.id/peraturan/detail/3020/keputusan-menteri-ketenagakerjaan-nomor-103-tahun-2026','Acuan 103/2026'))+'</div>'
   },
   {
     id:'next', label:'PENUTUP & ASSESSMENT', title:'Periksa pemahaman setelah materi selesai.',
@@ -206,17 +167,9 @@ const slides = [
     ]) + keyPoint('Jangan memasukkan data pribadi atau rahasia ke layanan AI tanpa otorisasi. Keputusan seleksi mengikuti kebijakan penyelenggara.') + '<div class="reader-actions"><button class="button button-primary" data-open="instructions">Panduan assessment '+icon('arrow')+'</button><a class="button button-outline" href="assets/panduan-program.txt" download>Unduh ringkasan '+icon('download')+'</a></div>'
   }
 ];
-function showTopic(id, unit) {
+function showTopic(id) {
   const index=slides.findIndex(slide=>slide.id===id);
   if(index>=0)showPresentation(index);
-  if(id==='solution' && unitLessons.some(item=>item.id===unit)) {
-    dialogBody.querySelectorAll('.unit-lesson').forEach(item=>{item.open=item.id===`unit-${unit}`;});
-    requestAnimationFrame(()=>{
-      const target=dialogBody.querySelector(`#unit-${unit}`);
-      target?.querySelector('summary').focus({preventScroll:true});
-      target?.scrollIntoView({block:'start',behavior:'instant'});
-    });
-  }
 }
 
 function setDialog(view) {
@@ -293,7 +246,7 @@ document.addEventListener('click', event => {
   const topicButton = event.target.closest('[data-topic]');
   const gotoButton = event.target.closest('[data-goto]');
   if (openButton) openView(openButton.dataset.open);
-  else if (topicButton) showTopic(topicButton.dataset.topic, topicButton.dataset.unit);
+  else if (topicButton) showTopic(topicButton.dataset.topic);
   else if (slideButton) showPresentation(Number(slideButton.dataset.slide));
   else if (gotoButton) changeSlide(Number(gotoButton.dataset.goto));
   else if (event.target.closest('.close-dialog')) dialog.close();
