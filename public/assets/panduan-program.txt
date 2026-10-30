@@ -52,7 +52,7 @@ Integrasi menghubungkan laporan login, sumber SOP yang diizinkan, model AI, dan 
 Pengantar ini hanya membahas gambaran alur integrasi. Rincian pemasangan, rencana perawatan, serta pelaksanaan perawatan tidak dibahas atau diujikan.
 
 ASSESSMENT
-50 soal pilihan ganda, 40 menit, satu jawaban paling tepat per soal.
+100 soal pilihan ganda, 40 menit, satu jawaban paling tepat per soal.
 Dilaksanakan terpisah melalui Google Forms di akhir sesi. Ikuti instruksi dan waktu yang diumumkan penyelenggara. Bank soal dan kunci disiapkan untuk penyelenggara dalam Excel, bukan pada website peserta. AI agent dan multi-agent tetap menjadi pengenalan pada materi, tetapi tidak diujikan pada assessment ini.
 
 ACUAN KOMPETENSI
