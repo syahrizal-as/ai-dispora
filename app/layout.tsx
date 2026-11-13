@@ -2,18 +2,18 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "AI Readiness — Dispora Jawa Barat",
-  description: "Pengantar AI yang praktis untuk calon peserta Dispora Jawa Barat: AI agent, kualitas data, pemasangan, dan perawatan solusi AI.",
-  icons: { icon: "/assets/favicon.svg" },
+  title: "Praktik AI untuk Dosen dan Profesional — ICC",
+  description: "Workshop praktik AI untuk dosen Fakultas Dakwah dan Komunikasi serta peserta Bank Indonesia.",
+  icons: { icon: "/assets/logo-icc.png" },
   openGraph: {
-    title: "AI Readiness — Langkah awal, masa depan bersama AI",
-    description: "Belajar, eksplorasi, dan pahami AI dalam sesi pengantar serta assessment 100 menit.",
+    title: "ICC — Lebih banyak praktik AI",
+    description: "Pengantar singkat, empat latihan langsung, dan proyek sesuai kebutuhan peserta.",
     locale: "id_ID",
     type: "website",
   },
 };
 
-export const viewport: Viewport = { themeColor: "#154d3e" };
+export const viewport: Viewport = { themeColor: "#124d8d" };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
